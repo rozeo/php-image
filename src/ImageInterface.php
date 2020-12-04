@@ -11,7 +11,7 @@ interface ImageInterface
     const ROTATION_TYPE_RAD = 1;
     const ROTATION_TYPE_DEG = 2;
 
-    public function getHandle(): GdImage;
+    public function getHandle(): ?GdImage;
 
     public function getWidth(): int;
 
@@ -30,4 +30,6 @@ interface ImageInterface
     public function flipVertical(): self;
 
     public function flip(): self;
+
+    public function free(): void;
 }

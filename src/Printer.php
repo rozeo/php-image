@@ -43,12 +43,17 @@ class Printer implements PrinterInterface
     public function outputJPEG(string $name, ImageInterface $image, int $quality = 90): bool
     {
         $path = $this->makeOutputPath($name, '.jpg');
-        return imagejpeg($image->getHandle(), $path, $quality);
+        return ($handle = $image->getHandle()) !== null
+            ? imagejpeg($handle, $path, $quality)
+            : false;
     }
 
     public function outputPNG(string $name, ImageInterface $image, int $quality = 90, $filters = null): bool
     {
         $path = $this->makeOutputPath($name, '.png');
-        return imagepng($image->getHandle(), $path, $quality, $filters);
+        return ($handle = $image->getHandle()) !== null
+            ? imagepng($handle, $path, $quality, $filters)
+            : false;
     }
+
 }
