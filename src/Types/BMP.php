@@ -11,6 +11,10 @@ class BMP extends Image
     public function __construct(string $filepath)
     {
         parent::__construct(imagecreatefrombmp($filepath));
-        imagecreatefrom
+    }
+
+    public function getMetaData(): ?array
+    {
+        return null;
     }
 }

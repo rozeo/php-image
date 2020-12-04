@@ -12,4 +12,9 @@ class WEBP extends Image
     {
         parent::__construct(imagecreatefromwebp($filepath));
     }
+
+    public function getMetaData(): ?array
+    {
+        return null;
+    }
 }

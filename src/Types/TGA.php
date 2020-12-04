@@ -12,4 +12,9 @@ class TGA extends Image
     {
         parent::__construct(imagecreatefromtga($filepath));
     }
+
+    public function getMetaData(): ?array
+    {
+        return null;
+    }
 }

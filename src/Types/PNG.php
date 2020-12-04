@@ -12,4 +12,9 @@ class PNG extends Image
     {
         parent::__construct(imagecreatefrompng($filepath));
     }
+
+    public function getMetaData(): ?array
+    {
+        return null;
+    }
 }

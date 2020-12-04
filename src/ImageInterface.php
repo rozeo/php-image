@@ -11,6 +11,11 @@ interface ImageInterface
     const ROTATION_TYPE_RAD = 1;
     const ROTATION_TYPE_DEG = 2;
 
+    /**
+     * @return ?array
+     */
+    public function getMetaData(): ?array;
+
     public function getHandle(): GdImage;
 
     public function getWidth(): int;

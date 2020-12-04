@@ -12,4 +12,9 @@ class GIF extends Image
     {
         parent::__construct(imagecreatefromgif($filepath));
     }
+
+    public function getMetaData(): ?array
+    {
+        return null;
+    }
 }
