@@ -1,0 +1,15 @@
+{
+    "name": "rozeo/php-image",
+    "authors": [
+        {
+            "name": "kenta-yasuoka",
+            "email": "yasuokakenta@team-lab.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rozeo\\Image\\": "src/"
+        }
+    }
+}
