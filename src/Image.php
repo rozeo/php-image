@@ -70,4 +70,22 @@ abstract class Image implements ImageInterface
 
         return $this->resize($this->width * $scale, $height);
     }
+
+    public function flip(): ImageInterface
+    {
+        imageflip($this->handle, IMG_FLIP_BOTH);
+        return $this;
+    }
+
+    public function flipHorizontal(): ImageInterface
+    {
+        imageflip($this->handle, IMG_FLIP_HORIZONTAL);
+        return $this;
+    }
+
+    public function flipVertical(): ImageInterface
+    {
+        imageflip($this->handle, IMG_FLIP_VERTICAL);
+        return $this;
+    }
 }

@@ -11,11 +11,6 @@ interface ImageInterface
     const ROTATION_TYPE_RAD = 1;
     const ROTATION_TYPE_DEG = 2;
 
-    /**
-     * @return ?array
-     */
-    public function getMetaData(): ?array;
-
     public function getHandle(): GdImage;
 
     public function getWidth(): int;
@@ -29,4 +24,10 @@ interface ImageInterface
     public function resizeWidth(float $width): self;
 
     public function resizeHeight(float $height): self;
+
+    public function flipHorizontal(): self;
+
+    public function flipVertical(): self;
+
+    public function flip(): self;
 }
