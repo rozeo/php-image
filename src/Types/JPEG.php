@@ -29,7 +29,12 @@ class JPEG extends Image
         $orientation = \intval($exif['Orientation']);
 
         match ($orientation) {
+            2 => $this->flipHorizontal(),
+            3 => $this->flip(),
+            4 => $this->flipVertical(),
+            5 => $this->rotate(-90)->flipHorizontal(),
             6 => $this->rotate(-90),
+            7 => $this->rotate(90)->flipHorizontal(),
             8 => $this->rotate(90),
         };
     }
